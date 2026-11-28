@@ -57,7 +57,6 @@ app.get("/api/totals/by-month", async (req, res) => {
  *   [{ "category": "Rent", "total": "10000.00" }, ...]
  */
 app.get("/api/totals/by-category", async (req, res) => {
-  // TODO(Jay): write the SQL for totals by category.
   const sql = ` SELECT c.name AS category, SUM(e.amount) AS total
   FROM  expenses e
   JOIN categories c 
